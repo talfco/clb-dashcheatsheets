@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Bower</title>
+    <link href='style.css' rel='stylesheet'>
+    <link href='//dash_ref/Category/Main commands/1'>
+    <link href='//dash_ref_Main commands/Entry/bower search/0'>
+    <link href='//dash_ref_Main commands/Entry/bower install/0'>
+    <link href='//dash_ref_Main commands/Entry/bower uninstall/0'>
+    <link href='//dash_ref_Main commands/Entry/bower update/0'>
+    <link href='//dash_ref/Category/Miscellaneous/1'>
+    <link href='//dash_ref_Miscellaneous/Entry/bower list/0'>
+    <link href='//dash_ref_Miscellaneous/Entry/bower lookup/0'>
+    <link href='//dash_ref_Miscellaneous/Entry/bower info/0'>
+    <link href='//dash_ref_Miscellaneous/Entry/bower cache-clean/0'>
+  </head>
+  <body>
+    <header>
+      <h1>Bower</h1>
+    </header>
+    <article>
+      <p><p>Cheatsheet for the <a href="https://github.com/bower/bower">Bower</a> Frontend Package Management Utility</p></p>
+      <section class='category'>
+        <h2 id='//dash_ref/Category/Main commands/1'>
+          Main commands
+        </h2>
+        <table>
+          <tr id='//dash_ref_Main commands/Entry/bower search/0'>
+            <td class='description'>
+              <div class='name'><p>bower search</p></div>
+              <div class='notes'></div>
+            </td>
+            <td class='td_notes'>
+              <div class='td_notes'>
+                <p>If you use it without a search term, you’ll get a list of all the bower packages available. 
+                To filter those down, use a search term.</p>
+                <pre class="highlight plaintext">bower search backbone</pre>
+              </div>
+            </td>
+          </tr>
+          <tr id='//dash_ref_Main commands/Entry/bower install/0'>
+            <td class='description'>
+              <div class='name'><p>bower install</p></div>
+              <div class='notes'></div>
+            </td>
+            <td class='td_notes'>
+              <div class='td_notes'>
+                <p>Will install the named component into the <code>components</code> directory.</p>
+                <pre class="highlight plaintext">bower install jquery</pre>
+                
+                <p>To install a specific version of a package, include the version number after it, with a hash between:</p>
+                <pre class="highlight plaintext">bower bower install jquery#1.7.0</pre>
+                
+                <p>Other possibilities</p>
+                <pre class="highlight plaintext">bower install git://github.com/pivotal/jasmine.git&#x000A;bower install http://backbonejs.org/backbone-min.js&#x000A;bower install ~/code/secretProject</pre>
+                
+                <p>In order to update automatically your <code>component.json</code></p>
+                <pre class="highlight plaintext">bower install jquery --save</pre>
+                
+                <p>Packages are getting cached in <code>~/.bower/&lt;package&gt;</code></p>
+              </div>
+            </td>
+          </tr>
+          <tr id='//dash_ref_Main commands/Entry/bower uninstall/0'>
+            <td class='description'>
+              <div class='name'><p>bower uninstall</p></div>
+              <div class='notes'></div>
+            </td>
+            <td class='td_notes'>
+              <div class='td_notes'><pre class="highlight plaintext">bower uninstall jquery</pre></div>
+            </td>
+          </tr>
+          <tr id='//dash_ref_Main commands/Entry/bower update/0'>
+            <td class='description'>
+              <div class='name'><p>bower update</p></div>
+              <div class='notes'></div>
+            </td>
+            <td class='td_notes'>
+              <div class='td_notes'>
+                <pre class="highlight plaintext">bower update</pre>
+                
+                <p>Note that you can’t pass a package name to the update command and only update that individual package: 
+                it will still update ’em all. You can get the latest version of a single package by running <code>bower install &lt;package&gt;</code> 
+                it will just over-write the version you currently have.</p>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section class='category'>
+        <h2 id='//dash_ref/Category/Miscellaneous/1'>
+          Miscellaneous
+        </h2>
+        <table>
+          <tr id='//dash_ref_Miscellaneous/Entry/bower list/0'>
+            <td class='description'>
+              <div class='name'><p>bower list</p></div>
+              <div class='notes'></div>
+            </td>
+            <td class='td_notes'>
+              <div class='td_notes'>
+                <p>Will list the packages your currently have installed, you can also use <code>bower ls</code> as a shorter command</p>
+                <pre class="highlight plaintext">bower list</pre>
+              </div>
+            </td>
+          </tr>
+          <tr id='//dash_ref_Miscellaneous/Entry/bower lookup/0'>
+            <td class='description'>
+              <div class='name'><p>bower lookup</p></div>
+              <div class='notes'></div>
+            </td>
+            <td class='td_notes'>
+              <div class='td_notes'>
+                <p>To see what repository URL a certain package refers to</p>
+                <pre class="highlight plaintext">bower lookup backbone</pre>
+              </div>
+            </td>
+          </tr>
+          <tr id='//dash_ref_Miscellaneous/Entry/bower info/0'>
+            <td class='description'>
+              <div class='name'><p>bower info</p></div>
+              <div class='notes'></div>
+            </td>
+            <td class='td_notes'>
+              <div class='td_notes'>
+                <p>To see what package versions are available</p>
+                <pre class="highlight plaintext">bower info backbone</pre>
+              </div>
+            </td>
+          </tr>
+          <tr id='//dash_ref_Miscellaneous/Entry/bower cache-clean/0'>
+            <td class='description'>
+              <div class='name'><p>bower cache-clean</p></div>
+              <div class='notes'></div>
+            </td>
+            <td class='td_notes'>
+              <div class='td_notes'>
+                <p>Finally, to remove all the packages cached to <code>~/.bower</code>,</p>
+                <pre class="highlight plaintext">bower cache-clean</pre>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section class='notes'>
+        <h2>Notes</h2>
+        <p>Thanks to <a href="http://hub.tutsplus.com/authors/andrew-burgess">Andrew Burgess</a> Tutsplus tutorial.</p>
+      </section>
+    </article>
+    <footer>
+      Generated with <a onclick="window.dash.openExternal_(this.href); return false;" href='https://github.com/Kapeli/cheatset#readme'>cheatset</a>
+    </footer>
+  </body>
+</html>
