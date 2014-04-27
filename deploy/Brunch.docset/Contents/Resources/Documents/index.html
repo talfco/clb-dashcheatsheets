@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Brunch</title>
+    <link href='style.css' rel='stylesheet'>
+    <link href='//dash_ref/Category/Commands/1'>
+    <link href='//dash_ref_Commands/Entry/brunch new/0'>
+    <link href='//dash_ref_Commands/Entry/brunch build/0'>
+    <link href='//dash_ref_Commands/Entry/brunch watch/0'>
+  </head>
+  <body>
+    <header>
+      <h1>Brunch</h1>
+    </header>
+    <article>
+      <p><p>Cheatsheet for  <a href="https://github.com/brunch/brunch/tree/stable/docs/">Brunch</a> HTML5 package builder</p></p>
+      <section class='category'>
+        <h2 id='//dash_ref/Category/Commands/1'>
+          Commands
+        </h2>
+        <table>
+          <tr id='//dash_ref_Commands/Entry/brunch new/0'>
+            <td class='description'>
+              <div class='name'><p>brunch new</p></div>
+              <div class='notes'></div>
+            </td>
+            <td class='td_notes'>
+              <div class='td_notes'>
+                <p>Full syntax: <code>brunch new &lt;url-or-path&gt; [rootPath]</code></p>
+                
+                <p>Create new brunch project. Options:</p>
+                
+                <ul>
+                <li><code>url-or-path</code>: (required) skeleton (path or git / github repo address of project), contents of which will be copied to new dir.</li>
+                <li><code>rootPath</code>: name of project directory that would be created. Default: &#39;.&#39;.</li>
+                <li><code>.git directory</code> is automatically removed when copying.</li>
+                </ul>
+                
+                <p>Brunch skeleton is basically an application boilerplate that provides a good starting point for new applications. Creating new application with any skeleton is pretty simple: <code>brunch new &lt;app&gt; --skeleton &lt;address&gt;</code>.</p>
+                
+                <p><code>&lt;address&gt;</code> can be a:</p>
+                
+                <ul>
+                <li>System directory (<code>~/skeletons/my-private-skel</code>)</li>
+                <li>Git URL (<code>git://github.com/user/skel.git</code>)</li>
+                <li>GitHub-sugared URL (<code>gh:user/skel, github:user/skel</code>)</li>
+                <li>Each skeleton must have <code>config.(js,coffee)</code>.</li>
+                </ul>
+                
+                <p>Short-cut: <code>brunch n</code>.</p>
+                
+                <p>Examples:</p>
+                
+                <ul>
+                <li><code>brunch n ~/brunch-templates/simple</code></li>
+                <li><code>brunch n gh:paulmillr/brunch-with-chaplin twitter</code></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr id='//dash_ref_Commands/Entry/brunch build/0'>
+            <td class='description'>
+              <div class='name'><p>brunch build</p></div>
+              <div class='notes'></div>
+            </td>
+            <td class='td_notes'>
+              <div class='td_notes'>
+                <p>Build a brunch project. Options</p>
+                
+                <ul>
+                <li><code>-e SETTING, --env SETTING:</code> apply settings from <code>config.overrides[SETTING]</code></li>
+                <li><code>-P, --production</code>: run optimize/minify plugins during compilation, disable source maps and auto-reload; </li>
+                <li>same as <code>-e production</code> and settings can be modified in <code>config.overrides.production</code></li>
+                </ul>
+                
+                <p>Short-cut: <code>brunch b</code>.</p>
+                
+                <p>Examples:</p>
+                
+                <ul>
+                <li><code>brunch b -P</code>: would create optimized/production build.</li>
+                <li><code>brunch b -e ios</code>: build using the settings from config.overrides.ios</li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr id='//dash_ref_Commands/Entry/brunch watch/0'>
+            <td class='description'>
+              <div class='name'><p>brunch watch</p></div>
+              <div class='notes'></div>
+            </td>
+            <td class='td_notes'>
+              <div class='td_notes'>
+                <p>Watch brunch directory and rebuild if something changed. Options:</p>
+                
+                <p>all the same options available in brunch build, plus:</p>
+                
+                <ul>
+                <li><code>-s, --server:</code> run a simple http server that would server public dir in / and test dir in /test/</li>
+                <li><code>-p PORT, --port PORT:</code> if a server option was specified, define on which port the server would run</li>
+                </ul>
+                
+                <p>Short-cut: <code>brunch w</code>.</p>
+                
+                <p>Examples:</p>
+                
+                <ul>
+                <li><code>brunch w</code>: simply watch current directory &amp; compile the output to public directory.</li>
+                <li><code>brunch w -s</code>: watch current project and run a webserver that would work on public directory.</li>
+                <li><code>brunch w -sp 8841</code>: same as above, but run webserver on port 8841.</li>
+                <li><code>brunch w -e ios</code>: watch current directory &amp; compile the output using settings from config.overrides.ios</li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </section>
+    </article>
+    <footer>
+      Generated with <a onclick="window.dash.openExternal_(this.href); return false;" href='https://github.com/Kapeli/cheatset#readme'>cheatset</a>
+    </footer>
+  </body>
+</html>
